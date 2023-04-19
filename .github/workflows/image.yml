@@ -4,7 +4,7 @@ name: 'build container images'
 on:
   push:
     branches:
-      - master
+      - main
     tags:
       - '*'
 
@@ -71,7 +71,7 @@ jobs:
         id: tag
         run: |
           DOCKER_IMAGE=quay.io/go-skynet/models
-          VERSION=${{ matrix.model }}-master
+          VERSION=${{ matrix.model }}-main
           SHORTREF=${GITHUB_SHA::8}
           # If this is git tag, use the tag name as a docker tag
           if [[ $GITHUB_REF == refs/tags/* ]]; then
