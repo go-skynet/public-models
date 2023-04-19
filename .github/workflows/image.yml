@@ -15,7 +15,7 @@ jobs:
       matrix:
         include:
           - model: "ggml-gpt4all-j"
-    uns-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Release space from worker
         run: |
